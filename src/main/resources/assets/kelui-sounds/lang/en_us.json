@@ -1,0 +1,18 @@
+{
+  "kelui-sounds": "KelUI Sounds",
+
+  "kelui-sounds.main": "Main page",
+
+  "kelui-sounds.description": "Hello, world!\nThis project is developed as a response to the mod “Console Sounds”, because the author of the mod (in Modrinth) did not remake the original code of the mod in any way. So I decided to write such a mod from scratch, with my own chips, etc.\n\n§c§n§oThe project is currently at an early stage of development",
+  "kelui-sounds.author": "Author: Kel Cuprum",
+  "kelui-sounds.modrinth": "Modrinth",
+  "kelui-sounds.source": "GitHub",
+
+
+  "kelui-sounds.config.pitch": "Pitch",
+  "kelui-sounds.config.volume": "Volume",
+
+  "kelui-sounds.components" : "Components",
+  "kelui-sounds.chat" : "Chat",
+  "kelui-sounds.inventory" : "Inventory"
+}

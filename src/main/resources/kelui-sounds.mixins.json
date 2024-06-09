@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.kelcuprum.keluisounds.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "chat.ChatComponentMixin",
+    "chat.ChatScreenMixin",
+    "components.AbstractButtonMixin",
+    "inventory.CreativeModeInventoryScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "inventory.InventoryMixin",
+    "inventory.InventoryScreenMixin"
+  ]
+}
