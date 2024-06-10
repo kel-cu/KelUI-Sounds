@@ -11,7 +11,7 @@ import ru.kelcuprum.keluisounds.KelUISounds;
 import ru.kelcuprum.keluisounds.SoundStorage;
 
 @Mixin(value = AbstractContainerScreen.class)
-public abstract class InventoryScreenMixin {
+public abstract class AbstractContainerScreenMixin {
 
     @Inject(method = "slotClicked", at = @At("RETURN"))
     public void quickMoveStack(Slot slot, int slotId, int mouseButton, ClickType type, CallbackInfo ci) {

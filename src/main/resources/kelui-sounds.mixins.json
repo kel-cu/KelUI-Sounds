@@ -8,13 +8,15 @@
     "chat.ChatScreenMixin",
     "components.AbstractButtonMixin",
     "inventory.CreativeModeInventoryScreenMixin",
-    "ui.ScreenMixin"
+    "ui.AbstractContainerScreenMixin",
+    "ui.MinecraftMixin",
+    "ui.PauseScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "mixins": [
-    "inventory.InventoryMixin",
-    "inventory.InventoryScreenMixin"
+    "inventory.AbstractContainerScreenMixin",
+    "inventory.InventoryMixin"
   ]
 }
