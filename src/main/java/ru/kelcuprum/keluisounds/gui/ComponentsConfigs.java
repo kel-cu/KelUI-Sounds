@@ -10,6 +10,7 @@ import ru.kelcuprum.alinlib.gui.components.text.CategoryBox;
 import ru.kelcuprum.alinlib.gui.components.text.TextBox;
 import ru.kelcuprum.alinlib.gui.screens.ConfigScreenBuilder;
 import ru.kelcuprum.keluisounds.KelUISounds;
+import ru.kelcuprum.keluisounds.SoundStorage;
 
 public class ComponentsConfigs {
     public static Screen build(Screen parent){
@@ -24,13 +25,13 @@ public class ComponentsConfigs {
 
         builder.addWidget(new CategoryBox(Component.translatable("kelui-sounds.config.category.button.hovered"))
                 .addValue(new ButtonBooleanBuilder(Component.translatable("kelui-sounds.config.ui.button.hovered"), false).setConfig(KelUISounds.config, "BUTTON.HOVERED").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(2.0F).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "BUTTON.HOVERED.PITCH").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(1.6F).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "BUTTON.HOVERED.VOLUME").build()));
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("button.hovered").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "BUTTON.HOVERED.PITCH").build())
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("button.hovered").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "BUTTON.HOVERED.VOLUME").build()));
 
         builder.addWidget(new CategoryBox(Component.translatable("kelui-sounds.config.category.button.focused"))
                 .addValue(new ButtonBooleanBuilder(Component.translatable("kelui-sounds.config.ui.button.focused"), false).setConfig(KelUISounds.config, "BUTTON.FOCUSED").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(2.0F).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "BUTTON.FOCUSED.PITCH").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(1.6F).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "BUTTON.FOCUSED.VOLUME").build()));
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("button.focused").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "BUTTON.FOCUSED.PITCH").build())
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("button.focused").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "BUTTON.FOCUSED.VOLUME").build()));
         return builder.build();
     }
 }

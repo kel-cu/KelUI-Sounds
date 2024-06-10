@@ -22,6 +22,7 @@ public class KelUISounds implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         log("Hello, world!");
+        SoundStorage.registerSounds();
     }
 
     public static void playSound(SoundEvent sound, float pitch, float volume){

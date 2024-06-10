@@ -10,6 +10,7 @@ import ru.kelcuprum.alinlib.gui.components.text.CategoryBox;
 import ru.kelcuprum.alinlib.gui.components.text.TextBox;
 import ru.kelcuprum.alinlib.gui.screens.ConfigScreenBuilder;
 import ru.kelcuprum.keluisounds.KelUISounds;
+import ru.kelcuprum.keluisounds.SoundStorage;
 
 public class ChatConfigs {
     public static Screen build(Screen parent){
@@ -29,8 +30,8 @@ public class ChatConfigs {
 
         builder.addWidget(new CategoryBox(Component.translatable("kelui-sounds.config.category.chat.messages"))
                 .addValue(new ButtonBooleanBuilder(Component.translatable("kelui-sounds.config.chat.messages"), false).setConfig(KelUISounds.config, "CHAT.MESSAGES").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(1.5F).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "CHAT.MESSAGES.PITCH").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(0.8F).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "CHAT.MESSAGES.VOLUME").build()));
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("chat.messages").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "CHAT.MESSAGES.PITCH").build())
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("chat.messages").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "CHAT.MESSAGES.VOLUME").build()));
         return builder.build();
     }
 }
