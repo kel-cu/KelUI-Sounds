@@ -7,7 +7,8 @@
     "chat.ChatComponentMixin",
     "chat.ChatScreenMixin",
     "components.AbstractButtonMixin",
-    "inventory.CreativeModeInventoryScreenMixin"
+    "inventory.CreativeModeInventoryScreenMixin",
+    "ui.ScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
