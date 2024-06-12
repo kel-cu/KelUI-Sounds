@@ -10,7 +10,9 @@
     "inventory.CreativeModeInventoryScreenMixin",
     "ui.AbstractContainerScreenMixin",
     "ui.MinecraftMixin",
-    "ui.PauseScreenMixin"
+    "ui.PauseScreenMixin",
+    "ui.sound.SoundInstanceAccessor",
+    "ui.sound.SoundManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

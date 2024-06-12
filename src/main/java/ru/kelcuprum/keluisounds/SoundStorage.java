@@ -25,6 +25,12 @@ public class SoundStorage {
         defaultSounds.put("inventory.slot_clicked", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 2.0F, 0.35F, "INVENTORY.SLOT_CLICKED"));
         defaultSounds.put("inventory.swap_paint", new SoundSettings(SoundEvents.NOTE_BLOCK_HAT, 2.0F, 0.35F, "INVENTORY_SWAP_PAINT"));
         defaultSounds.put("inventory.drop", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 2.0F, 0.4F, "INVENTORY.DROP"));
+        //
+        defaultSounds.put("inventory.init", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 2.0F, 0.4F, "INVENTORY.INIT"));
+        defaultSounds.put("inventory.on_close", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 2.0F, 0.4F, "INVENTORY.ON_CLOSE"));
+        //
+        defaultSounds.put("pause.init", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 2.0F, 0.4F, "PAUSE.INIT"));
+        defaultSounds.put("pause.on_close", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 2.0F, 0.4F, "PAUSE.ON_CLOSE"));
     }
     public static void registerSounds$oneShot(){
         //

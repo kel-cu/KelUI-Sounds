@@ -1,0 +1,11 @@
+{
+  "music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "kelui-sounds:yonkagor_its_normal",
+        "volume": 0.3
+      }
+    ]
+  }
+}

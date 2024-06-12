@@ -14,5 +14,6 @@
 
   "kelui-sounds.components" : "Components",
   "kelui-sounds.chat" : "Chat",
-  "kelui-sounds.inventory" : "Inventory"
+  "kelui-sounds.inventory" : "Inventory",
+  "kelui-sounds.ui" : "UI"
 }
