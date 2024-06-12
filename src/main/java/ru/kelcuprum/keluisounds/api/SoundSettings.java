@@ -42,6 +42,12 @@ public class SoundSettings {
     public float getVolume(){
         return KelUISounds.config.getNumber(configType+".VOLUME", defaultVolume).floatValue();
     }
+    public String getConfigPitch(){
+        return configType+".PITCH";
+    }
+    public String getConfigVolume(){
+        return configType+".VOLUME";
+    }
 
     public SoundEvent getSound(){
         return soundByRL != null ? SoundEvent.createVariableRangeEvent(soundByRL) : soundEvent != null ? soundEvent : holderSoundEvent != null ? holderSoundEvent.value() : SoundEvents.PLAYER_DEATH;

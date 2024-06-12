@@ -1,6 +1,8 @@
 package ru.kelcuprum.keluisounds;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.minecraft.client.gui.screens.GenericMessageScreen;
+import net.minecraft.client.gui.screens.LevelLoadingScreen;
 import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.client.resources.sounds.SoundInstance;
@@ -47,7 +49,7 @@ public class KelUISounds implements ClientModInitializer {
                     AlinLib.MINECRAFT.getSoundManager().stop(music);
                 return;
             }
-            if (!(AlinLib.MINECRAFT.screen instanceof TitleScreen)) return;
+            if (AlinLib.MINECRAFT.level != null || (AlinLib.MINECRAFT.screen instanceof LevelLoadingScreen || AlinLib.MINECRAFT.screen instanceof GenericMessageScreen)) return;
             AlinLib.MINECRAFT.getSoundManager().stop(menuMusic);
 
             if (AlinLib.MINECRAFT.getSoundManager().isActive(isOneShot() ? music$OneShot : music)) return;
@@ -63,7 +65,7 @@ public class KelUISounds implements ClientModInitializer {
         Registry.register(BuiltInRegistries.SOUND_EVENT, musicID, musicEvent);
 
         music = SimpleSoundInstance.forMusic(musicEvent);
-        ((SoundInstanceAccessor) music).setLooping(true);
+//        ((SoundInstanceAccessor) music).setLooping(true);
     }
     public void registerMusic$OneShot(){
         ResourceLocation musicID = new ResourceLocation("kelui-sounds", "oneshot_music");
@@ -71,7 +73,7 @@ public class KelUISounds implements ClientModInitializer {
         Registry.register(BuiltInRegistries.SOUND_EVENT, musicID, musicEvent);
 
         music$OneShot = SimpleSoundInstance.forMusic(musicEvent);
-        ((SoundInstanceAccessor) music$OneShot).setLooping(true);
+//        ((SoundInstanceAccessor) music$OneShot).setLooping(true);
     }
 
     public static boolean isOneShot(){

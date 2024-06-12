@@ -32,8 +32,8 @@ public class ChatConfigs {
 
         builder.addWidget(new CategoryBox(Component.translatable("kelui-sounds.config.category.chat.messages"))
                 .addValue(new ButtonBooleanBuilder(Component.translatable("kelui-sounds.config.chat.messages"), false).setConfig(KelUISounds.config, "CHAT.MESSAGES").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("chat.messages").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "CHAT.MESSAGES.PITCH").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("chat.messages").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "CHAT.MESSAGES.VOLUME").build()));
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("chat.messages").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("chat.messages").getConfigPitch()).build())
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("chat.messages").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("chat.messages").getConfigVolume()).build()));
         return builder.build();
     }
 }

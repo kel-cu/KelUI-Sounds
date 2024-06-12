@@ -10,6 +10,7 @@ import ru.kelcuprum.keluisounds.SoundStorage;
 
 @Mixin(AbstractButton.class)
 public abstract class AbstractButtonMixin extends AbstractWidget {
+    long time = System.currentTimeMillis();
 
     public AbstractButtonMixin(int x, int y, int width, int height, Component message) {
         super(x, y, width, height, message);
@@ -23,7 +24,7 @@ public abstract class AbstractButtonMixin extends AbstractWidget {
     public boolean isHovered() {
         if (lastHovered != isHovered && KelUISounds.config.getBoolean("BUTTON.HOVERED", false)) {
             lastHovered = isHovered;
-            if (isHovered && isActive())
+            if (isHovered && isActive() && (System.currentTimeMillis()-time > 250))
                 KelUISounds.playSound(SoundStorage.getSound("button.hovered").getSound(), SoundStorage.getSound("button.hovered").getPitch(), SoundStorage.getSound("button.hovered").getVolume());
         }
         return isHovered;
@@ -32,7 +33,7 @@ public abstract class AbstractButtonMixin extends AbstractWidget {
     public void setFocused(boolean focused) {
         if (lastFocused != focused && KelUISounds.config.getBoolean("BUTTON.FOCUSED", false)) {
             lastFocused = focused;
-            if (focused && isActive())
+            if (focused && isActive() && !isHovered && (System.currentTimeMillis()-time > 250))
                 KelUISounds.playSound(SoundStorage.getSound("button.focused").getSound(), SoundStorage.getSound("button.focused").getPitch(), SoundStorage.getSound("button.focused").getVolume());
         }
         super.setFocused(focused);

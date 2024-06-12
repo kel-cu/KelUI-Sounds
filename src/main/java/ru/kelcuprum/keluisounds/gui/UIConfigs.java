@@ -28,23 +28,23 @@ public class UIConfigs {
 
         builder.addWidget(new CategoryBox(Component.translatable("kelui-sounds.config.category.inventory.init"))
                 .addValue(new ButtonBooleanBuilder(Component.translatable("kelui-sounds.config.ui.inventory.init"), true).setConfig(KelUISounds.config, "INVENTORY.INIT").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("inventory.init").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "INVENTORY.INIT.PITCH").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("inventory.init").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "INVENTORY.INIT.VOLUME").build()));
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("inventory.init").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("inventory.init").getConfigPitch()).build())
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("inventory.init").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("inventory.init").getConfigVolume()).build()));
 
         builder.addWidget(new CategoryBox(Component.translatable("kelui-sounds.config.category.inventory.on_close"))
                 .addValue(new ButtonBooleanBuilder(Component.translatable("kelui-sounds.config.ui.inventory.on_close"), true).setConfig(KelUISounds.config, "INVENTORY.ON_CLOSE").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("inventory.on_close").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "INVENTORY.INIT.ON_CLOSE").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("inventory.on_close").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "INVENTORY.INIT.ON_CLOSE").build()));
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("inventory.on_close").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("inventory.on_close").getConfigPitch()).build())
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("inventory.on_close").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("inventory.on_close").getConfigVolume()).build()));
 
         builder.addWidget(new CategoryBox(Component.translatable("kelui-sounds.config.category.pause.init"))
                 .addValue(new ButtonBooleanBuilder(Component.translatable("kelui-sounds.config.ui.pause.init"), true).setConfig(KelUISounds.config, "PAUSE.INIT").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("pause.init").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "PAUSE.INIT.PITCH").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("pause.init").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "PAUSE.INIT.VOLUME").build()));
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("pause.init").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("pause.init").getConfigPitch()).build())
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("pause.init").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("pause.init").getConfigVolume()).build()));
 
         builder.addWidget(new CategoryBox(Component.translatable("kelui-sounds.config.category.pause.on_close"))
                 .addValue(new ButtonBooleanBuilder(Component.translatable("kelui-sounds.config.ui.pause.on_close"), true).setConfig(KelUISounds.config, "PAUSE.ON_CLOSE").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("pause.on_close").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "PAUSE.INIT.ON_CLOSE").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("pause.on_close").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, "PAUSE.INIT.ON_CLOSE").build()));
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("pause.on_close").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("pause.on_close").getConfigPitch()).build())
+                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("pause.on_close").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("pause.on_close").getConfigVolume()).build()));
         return builder.build();
     }
 }
