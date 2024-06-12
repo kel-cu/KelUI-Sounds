@@ -33,15 +33,7 @@ public class SoundStorage {
         defaultSounds.put("pause.on_close", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 2.0F, 0.4F, "PAUSE.ON_CLOSE"));
     }
     public static void registerSounds$oneShot(){
-        //
-//        defaultSounds.put("button.hovered", new SoundSettings());
-//        defaultSounds.put("button.focused", new SoundSettings());
-//        //
-//        defaultSounds.put("chat.messages", new SoundSettings());
-//        //
-//        defaultSounds.put("inventory.slot_clicked", new SoundSettings());
-//        defaultSounds.put("inventory.swap_paint", new SoundSettings());
-//        defaultSounds.put("inventory.drop", new SoundSettings());
+        KelUISounds.log("OneShot soon...");
     }
 
     public static SoundSettings getSound(String id){
