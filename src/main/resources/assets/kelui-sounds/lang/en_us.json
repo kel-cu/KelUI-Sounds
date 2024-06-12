@@ -2,14 +2,44 @@
   "kelui-sounds": "KelUI Sounds",
 
   "kelui-sounds.main": "Main configs",
+  "kelui-sounds.config.oneshot_sounds": "OneShot Sounds",
 
   "kelui-sounds.components" : "Components",
+  "kelui-sounds.config.category.button.hovered": "Button Hovered",
+  "kelui-sounds.config.ui.button.hovered": "Hovered",
+
+  "kelui-sounds.config.category.button.focused": "Button Focused",
+  "kelui-sounds.config.ui.button.focused": "Focused",
 
   "kelui-sounds.chat" : "Chat",
+  "kelui-sounds.config.category.chat.typing_sound" : "Typing",
+  "kelui-sounds.config.chat.typing_sound" : "Typing Sounds",
+
+  "kelui-sounds.config.category.chat.messages" : "Messages",
+  "kelui-sounds.config.chat.messages" : "New Messages",
 
   "kelui-sounds.inventory" : "Inventory",
+  "kelui-sounds.config.category.inventory.slot_clicked": "Click",
+  "kelui-sounds.config.ui.inventory.slot_clicked": "Slot Clicked",
+  "kelui-sounds.config.category.inventory.swap_paint": "Hot Bar",
+  "kelui-sounds.config.ui.inventory.swap_paint": "Slot Swap",
+  "kelui-sounds.config.category.inventory.drop": "Items",
+  "kelui-sounds.config.ui.inventory.drop": "Item Drop",
 
   "kelui-sounds.ui" : "UI",
+  "kelui-sounds.config.menu.music": "Menu Music",
+
+  "kelui-sounds.config.category.inventory.init": "Open Inventory",
+  "kelui-sounds.config.ui.inventory.init": "Open sound",
+
+  "kelui-sounds.config.category.inventory.on_close": "Close Inventory",
+  "kelui-sounds.config.ui.inventory.on_close": "Close sound",
+
+  "kelui-sounds.config.category.pause.init": "Open Pause Menu",
+  "kelui-sounds.config.ui.pause.init": "Open sound",
+
+  "kelui-sounds.config.category.pause.on_close": "Close Pause Menu",
+  "kelui-sounds.config.ui.pause.on_close": "Close sound",
 
   "kelui-sounds.about" : "About",
   "kelui-sounds.description": "Hello, world!\nThis project is developed as a response to the mod “Console Sounds”, because the author of the mod (in Modrinth) did not remake the original code of the mod in any way. So I decided to write such a mod from scratch, with my own chips, etc.\n\n§c§n§oThe project is currently at an early stage of development",

@@ -45,8 +45,8 @@ public class KelUISounds implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register((s) -> {
             if (!KelUISounds.config.getBoolean("MENU.MUSIC", false)) {
-                if (AlinLib.MINECRAFT.getSoundManager().isActive(music))
-                    AlinLib.MINECRAFT.getSoundManager().stop(music);
+                if (AlinLib.MINECRAFT.getSoundManager().isActive(isOneShot() ? music$OneShot : music))
+                    AlinLib.MINECRAFT.getSoundManager().stop(isOneShot() ? music$OneShot : music);
                 return;
             }
             if (AlinLib.MINECRAFT.level != null || (AlinLib.MINECRAFT.screen instanceof LevelLoadingScreen || AlinLib.MINECRAFT.screen instanceof GenericMessageScreen)) return;

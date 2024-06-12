@@ -4,11 +4,11 @@
     "sounds": [
       {
         "name": "kelui-sounds:yonkagor_its_normal",
-        "volume": 0.3
+        "volume": 0.45
       },
       {
         "name": "kelui-sounds:yonkagor_ybg",
-        "volume": 0.3
+        "volume": 0.45
       }
     ]
   },
