@@ -44,9 +44,9 @@ public class SoundStorage {
         //
 //        oneShotSounds.put("chat.messages", new SoundSettings(decision, 1.5F, 0.8F, "ONESHOT.CHAT.MESSAGES"));
         //
-//        defaultSounds.put("inventory.slot_clicked", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 2.0F, 0.35F, "ONESHOT.INVENTORY.SLOT_CLICKED"));
-//        defaultSounds.put("inventory.swap_paint", new SoundSettings(decision, 2.0F, 0.35F, "ONESHOT.INVENTORY_SWAP_PAINT"));
-//        defaultSounds.put("inventory.drop", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 2.0F, 0.4F, "ONESHOT.INVENTORY.DROP"));
+//        oneShotSounds.put("inventory.slot_clicked", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 2.0F, 0.35F, "ONESHOT.INVENTORY.SLOT_CLICKED"));
+//        oneShotSounds.put("inventory.swap_paint", new SoundSettings(decision, 2.0F, 0.35F, "ONESHOT.INVENTORY_SWAP_PAINT"));
+//        oneShotSounds.put("inventory.drop", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 2.0F, 0.4F, "ONESHOT.INVENTORY.DROP"));
         //
         oneShotSounds.put("inventory.init", new SoundSettings(init, 1.0F, 0.4F, "ONESHOT.INVENTORY.INIT"));
         oneShotSounds.put("inventory.on_close", new SoundSettings(onClose, 1.0F, 0.4F, "ONESHOT.INVENTORY.ON_CLOSE"));
