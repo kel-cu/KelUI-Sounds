@@ -7,5 +7,12 @@
         "volume": 0.3
       }
     ]
+  },
+  "oneshot_music": {
+    "category": "oneshot_music",
+    "sounds": [
+      "kelui-sounds:oneshot/myburdenislight",
+      "kelui-sounds:oneshot/myburdenisdead"
+    ]
   }
 }

@@ -33,16 +33,13 @@ public class KelUISounds implements ClientModInitializer {
 
     public static SoundInstance menuMusic = SimpleSoundInstance.forMusic(SoundEvent.createVariableRangeEvent(SoundInstance.EMPTY_SOUND));
     public static SoundInstance music;
+    public static SoundInstance music$OneShot;
 
     @Override
     public void onInitializeClient() {
         log("Hello, world!");
-        ResourceLocation musicID = new ResourceLocation("kelui-sounds", "music");
-        SoundEvent musicEvent = SoundEvent.createVariableRangeEvent(musicID);
-        Registry.register(BuiltInRegistries.SOUND_EVENT, musicID, musicEvent);
-
-        music = SimpleSoundInstance.forMusic(musicEvent);
-        ((SoundInstanceAccessor) music).setLooping(true);
+        registerMusic();
+        registerMusic$OneShot();
 
         ClientTickEvents.END_CLIENT_TICK.register((s) -> {
             if (!KelUISounds.config.getBoolean("MENU.MUSIC", false)) {
@@ -53,11 +50,32 @@ public class KelUISounds implements ClientModInitializer {
             if (!(AlinLib.MINECRAFT.screen instanceof TitleScreen)) return;
             AlinLib.MINECRAFT.getSoundManager().stop(menuMusic);
 
-            if (AlinLib.MINECRAFT.getSoundManager().isActive(music)) return;
-            AlinLib.MINECRAFT.getSoundManager().play(music);
+            if (AlinLib.MINECRAFT.getSoundManager().isActive(isOneShot() ? music$OneShot : music)) return;
+            AlinLib.MINECRAFT.getSoundManager().play(isOneShot() ? music$OneShot : music);
         });
 
         SoundStorage.registerSounds();
+    }
+
+    public void registerMusic(){
+        ResourceLocation musicID = new ResourceLocation("kelui-sounds", "music");
+        SoundEvent musicEvent = SoundEvent.createVariableRangeEvent(musicID);
+        Registry.register(BuiltInRegistries.SOUND_EVENT, musicID, musicEvent);
+
+        music = SimpleSoundInstance.forMusic(musicEvent);
+        ((SoundInstanceAccessor) music).setLooping(true);
+    }
+    public void registerMusic$OneShot(){
+        ResourceLocation musicID = new ResourceLocation("kelui-sounds", "oneshot_music");
+        SoundEvent musicEvent = SoundEvent.createVariableRangeEvent(musicID);
+        Registry.register(BuiltInRegistries.SOUND_EVENT, musicID, musicEvent);
+
+        music$OneShot = SimpleSoundInstance.forMusic(musicEvent);
+        ((SoundInstanceAccessor) music$OneShot).setLooping(true);
+    }
+
+    public static boolean isOneShot(){
+        return config.getBoolean("ONESHOT_SOUNDS", false);
     }
 
     public static void playSound(SoundEvent sound, float pitch, float volume) {

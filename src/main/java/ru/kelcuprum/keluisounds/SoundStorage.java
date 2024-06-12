@@ -37,7 +37,7 @@ public class SoundStorage {
     }
 
     public static SoundSettings getSound(String id){
-        if(KelUISounds.config.getBoolean("USE_ONESHOT_SOUNDS", false)) return oneShotSounds.getOrDefault(id, defaultSounds.getOrDefault(id, safeSoundSettings));
+        if(KelUISounds.isOneShot()) return oneShotSounds.getOrDefault(id, defaultSounds.getOrDefault(id, safeSoundSettings));
         else return defaultSounds.getOrDefault(id, safeSoundSettings);
     }
 }
