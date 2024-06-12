@@ -18,5 +18,4 @@ public class ChatComponentMixin {
         if (KelUISounds.config.getBoolean("CHAT.MESSAGES", false))
             KelUISounds.playSound(SoundStorage.getSound("chat.messages").getSound(), SoundStorage.getSound("chat.messages").getPitch(), SoundStorage.getSound("chat.messages").getVolume());
     }
-
 }
