@@ -35,10 +35,10 @@ public class SoundStorage {
         defaultSounds.put("pause.on_close", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 0.5F, 0.4F, "PAUSE.ON_CLOSE"));
     }
     public static void registerSounds$oneShot(){
-        ResourceLocation onClose = new InterfaceUtils().getResourceLocation("kelui-sounds", "oneshot_menu_cancel");
-        ResourceLocation init = new InterfaceUtils().getResourceLocation("kelui-sounds", "oneshot_menu_decision");
-        ResourceLocation hovered = new InterfaceUtils().getResourceLocation("kelui-sounds", "oneshot_menu_cursor");
-        ResourceLocation focused = new InterfaceUtils().getResourceLocation("kelui-sounds", "oneshot_title_cursor");
+        ResourceLocation onClose = InterfaceUtils.getResourceLocation("kelui-sounds", "oneshot_menu_cancel");
+        ResourceLocation init = InterfaceUtils.getResourceLocation("kelui-sounds", "oneshot_menu_decision");
+        ResourceLocation hovered = InterfaceUtils.getResourceLocation("kelui-sounds", "oneshot_menu_cursor");
+        ResourceLocation focused = InterfaceUtils.getResourceLocation("kelui-sounds", "oneshot_title_cursor");
         oneShotSounds.put("button.hovered", new SoundSettings(hovered, 1.0F, 0.25F, "ONESHOT.BUTTON.HOVERED"));
         oneShotSounds.put("button.focused", new SoundSettings(focused, 1.0F, 0.25F, "ONESHOT.BUTTON.FOCUSED"));
         //

@@ -17,6 +17,7 @@ import ru.kelcuprum.alinlib.config.Config;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ru.kelcuprum.alinlib.gui.InterfaceUtils;
 import ru.kelcuprum.keluisounds.mixin.ui.sound.SoundInstanceAccessor;
 
 public class KelUISounds implements ClientModInitializer {
@@ -60,7 +61,7 @@ public class KelUISounds implements ClientModInitializer {
     }
 
     public void registerMusic(){
-        ResourceLocation musicID = new ResourceLocation("kelui-sounds", "music");
+        ResourceLocation musicID = InterfaceUtils.getResourceLocation("kelui-sounds", "music");
         SoundEvent musicEvent = SoundEvent.createVariableRangeEvent(musicID);
         Registry.register(BuiltInRegistries.SOUND_EVENT, musicID, musicEvent);
 
@@ -68,7 +69,7 @@ public class KelUISounds implements ClientModInitializer {
 //        ((SoundInstanceAccessor) music).setLooping(true);
     }
     public void registerMusic$OneShot(){
-        ResourceLocation musicID = new ResourceLocation("kelui-sounds", "oneshot_music");
+        ResourceLocation musicID = InterfaceUtils.getResourceLocation("kelui-sounds", "oneshot_music");
         SoundEvent musicEvent = SoundEvent.createVariableRangeEvent(musicID);
         Registry.register(BuiltInRegistries.SOUND_EVENT, musicID, musicEvent);
 
