@@ -5,7 +5,7 @@ import net.minecraft.network.chat.Component;
 import ru.kelcuprum.alinlib.AlinLib;
 import ru.kelcuprum.alinlib.gui.components.builder.button.ButtonBooleanBuilder;
 import ru.kelcuprum.alinlib.gui.components.builder.button.ButtonBuilder;
-import ru.kelcuprum.alinlib.gui.components.builder.slider.SliderFloatBuilder;
+import ru.kelcuprum.alinlib.gui.components.builder.slider.SliderBuilder;
 import ru.kelcuprum.alinlib.gui.components.text.CategoryBox;
 import ru.kelcuprum.alinlib.gui.components.text.TextBox;
 import ru.kelcuprum.alinlib.gui.screens.ConfigScreenBuilder;
@@ -27,13 +27,13 @@ public class ComponentsConfigs {
 
         builder.addWidget(new CategoryBox(Component.translatable("kelui-sounds.config.category.button.hovered"))
                 .addValue(new ButtonBooleanBuilder(Component.translatable("kelui-sounds.config.ui.button.hovered"), false).setConfig(KelUISounds.config, "BUTTON.HOVERED").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("button.hovered").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("button.hovered").getConfigPitch()).build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("button.hovered").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("button.hovered").getConfigVolume()).build()));
+                .addValue(new SliderBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("button.hovered").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("button.hovered").getConfigPitch()).build())
+                .addValue(new SliderBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("button.hovered").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("button.hovered").getConfigVolume()).build()));
 
         builder.addWidget(new CategoryBox(Component.translatable("kelui-sounds.config.category.button.focused"))
                 .addValue(new ButtonBooleanBuilder(Component.translatable("kelui-sounds.config.ui.button.focused"), false).setConfig(KelUISounds.config, "BUTTON.FOCUSED").build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("button.focused").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("button.focused").getConfigPitch()).build())
-                .addValue(new SliderFloatBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("button.focused").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("button.focused").getConfigVolume()).build()));
+                .addValue(new SliderBuilder(Component.translatable("kelui-sounds.config.pitch")).setDefaultValue(SoundStorage.getSound("button.focused").defaultPitch).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("button.focused").getConfigPitch()).build())
+                .addValue(new SliderBuilder(Component.translatable("kelui-sounds.config.volume")).setDefaultValue(SoundStorage.getSound("button.focused").defaultVolume).setMin(0.1F).setMax(2.0F).setConfig(KelUISounds.config, SoundStorage.getSound("button.focused").getConfigVolume()).build()));
         return builder.build();
     }
 }

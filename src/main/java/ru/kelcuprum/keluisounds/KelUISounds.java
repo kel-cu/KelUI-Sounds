@@ -3,7 +3,6 @@ package ru.kelcuprum.keluisounds;
 import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.client.gui.screens.GenericMessageScreen;
 import net.minecraft.client.gui.screens.LevelLoadingScreen;
-import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.core.Registry;
@@ -17,8 +16,7 @@ import ru.kelcuprum.alinlib.config.Config;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ru.kelcuprum.alinlib.gui.InterfaceUtils;
-import ru.kelcuprum.keluisounds.mixin.ui.sound.SoundInstanceAccessor;
+import ru.kelcuprum.alinlib.gui.GuiUtils;
 
 public class KelUISounds implements ClientModInitializer {
 
@@ -61,7 +59,7 @@ public class KelUISounds implements ClientModInitializer {
     }
 
     public void registerMusic(){
-        ResourceLocation musicID = InterfaceUtils.getResourceLocation("kelui-sounds", "music");
+        ResourceLocation musicID = GuiUtils.getResourceLocation("kelui-sounds", "music");
         SoundEvent musicEvent = SoundEvent.createVariableRangeEvent(musicID);
         Registry.register(BuiltInRegistries.SOUND_EVENT, musicID, musicEvent);
 
@@ -69,7 +67,7 @@ public class KelUISounds implements ClientModInitializer {
 //        ((SoundInstanceAccessor) music).setLooping(true);
     }
     public void registerMusic$OneShot(){
-        ResourceLocation musicID = InterfaceUtils.getResourceLocation("kelui-sounds", "oneshot_music");
+        ResourceLocation musicID = GuiUtils.getResourceLocation("kelui-sounds", "oneshot_music");
         SoundEvent musicEvent = SoundEvent.createVariableRangeEvent(musicID);
         Registry.register(BuiltInRegistries.SOUND_EVENT, musicID, musicEvent);
 

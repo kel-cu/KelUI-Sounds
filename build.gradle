@@ -19,6 +19,7 @@ repositories {
     maven { url = "https://maven.meteordev.org/releases" }
     maven { url = 'https://repo.kelcuprum.ru/snapshots' }
     maven { url = 'https://repo.kelcuprum.ru/releases' }
+    maven { url = 'https://repo.kelcuprum.ru/forks' }
     maven { url = 'https://repo.kelcuprum.ru/test' }
     maven { url = "https://maven.parchmentmc.org" } // MAPPINGS
     maven { url = "https://jitpack.io/" }

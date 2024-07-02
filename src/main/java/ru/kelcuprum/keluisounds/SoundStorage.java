@@ -2,7 +2,7 @@ package ru.kelcuprum.keluisounds;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
-import ru.kelcuprum.alinlib.gui.InterfaceUtils;
+import ru.kelcuprum.alinlib.gui.GuiUtils;
 import ru.kelcuprum.keluisounds.api.SoundSettings;
 
 import java.util.HashMap;
@@ -35,10 +35,10 @@ public class SoundStorage {
         defaultSounds.put("pause.on_close", new SoundSettings(SoundEvents.ARMOR_EQUIP_ELYTRA, 0.5F, 0.4F, "PAUSE.ON_CLOSE"));
     }
     public static void registerSounds$oneShot(){
-        ResourceLocation onClose = InterfaceUtils.getResourceLocation("kelui-sounds", "oneshot_menu_cancel");
-        ResourceLocation init = InterfaceUtils.getResourceLocation("kelui-sounds", "oneshot_menu_decision");
-        ResourceLocation hovered = InterfaceUtils.getResourceLocation("kelui-sounds", "oneshot_menu_cursor");
-        ResourceLocation focused = InterfaceUtils.getResourceLocation("kelui-sounds", "oneshot_title_cursor");
+        ResourceLocation onClose = GuiUtils.getResourceLocation("kelui-sounds", "oneshot_menu_cancel");
+        ResourceLocation init = GuiUtils.getResourceLocation("kelui-sounds", "oneshot_menu_decision");
+        ResourceLocation hovered = GuiUtils.getResourceLocation("kelui-sounds", "oneshot_menu_cursor");
+        ResourceLocation focused = GuiUtils.getResourceLocation("kelui-sounds", "oneshot_title_cursor");
         oneShotSounds.put("button.hovered", new SoundSettings(hovered, 1.0F, 0.25F, "ONESHOT.BUTTON.HOVERED"));
         oneShotSounds.put("button.focused", new SoundSettings(focused, 1.0F, 0.25F, "ONESHOT.BUTTON.FOCUSED"));
         //
