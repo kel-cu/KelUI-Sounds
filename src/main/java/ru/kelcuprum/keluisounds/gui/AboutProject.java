@@ -24,9 +24,9 @@ public class AboutProject {
 
         builder.addWidget(new MessageBox(Component.translatable("kelui-sounds.description")));
 
-        builder.addWidget(new MessageBox(Component.translatable("kelui-sounds.author"), (s) -> Util.getPlatform().openUri("https://kelcu.ru/git")));
-        builder.addWidget(new MessageBox(Component.translatable("kelui-sounds.modrinth"), (s) -> Util.getPlatform().openUri("https://modrinth.com/mod/kelui-sounds")));
-        builder.addWidget(new MessageBox(Component.translatable("kelui-sounds.source"), (s) -> Util.getPlatform().openUri("https://github.com/kel-cu/kelui-sounds")));
+        builder.addWidget(new ButtonBuilder(Component.translatable("kelui-sounds.author"), Component.literal("Kel-Cu"), (s) -> Util.getPlatform().openUri("https://kelcu.ru/git")));
+        builder.addWidget(new ButtonBuilder(Component.translatable("kelui-sounds.modrinth"), Component.literal("KelUI Sounds"), (s) -> Util.getPlatform().openUri("https://modrinth.com/mod/kelui-sounds")));
+        builder.addWidget(new ButtonBuilder(Component.translatable("kelui-sounds.source"), Component.literal("kel-cu/KelUI-Sounds"), (s) -> Util.getPlatform().openUri("https://github.com/kel-cu/kelui-sounds")));
         return builder.build();
     }
 }
