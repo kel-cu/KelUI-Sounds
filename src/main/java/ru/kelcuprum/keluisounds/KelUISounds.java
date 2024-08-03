@@ -18,6 +18,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ru.kelcuprum.alinlib.gui.GuiUtils;
 
+import java.time.LocalDate;
+
 public class KelUISounds implements ClientModInitializer {
 
     public static final Logger LOG = LogManager.getLogger("Action Bar Info");
@@ -77,6 +79,9 @@ public class KelUISounds implements ClientModInitializer {
 
     public static boolean isOneShot(){
         return config.getBoolean("ONESHOT_SOUNDS", false);
+    }
+    public static boolean isAprilFool(){
+        return LocalDate.now().getMonthValue() == 4 && LocalDate.now().getDayOfMonth() == 1;
     }
 
     public static void playSound(SoundEvent sound, float pitch, float volume) {

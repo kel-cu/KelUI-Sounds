@@ -10,6 +10,7 @@ import ru.kelcuprum.keluisounds.SoundStorage;
 
 @Mixin(AbstractButton.class)
 public abstract class AbstractButtonMixin extends AbstractWidget {
+    @Unique
     long time = System.currentTimeMillis();
 
     public AbstractButtonMixin(int x, int y, int width, int height, Component message) {

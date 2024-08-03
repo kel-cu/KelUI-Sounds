@@ -9,6 +9,7 @@
     "components.AbstractButtonMixin",
     "inventory.CreativeModeInventoryScreenMixin",
     "ui.AbstractContainerScreenMixin",
+    "ui.ChatScreenMixin",
     "ui.MinecraftMixin",
     "ui.PauseScreenMixin",
     "ui.sound.SoundInstanceAccessor",

@@ -44,5 +44,27 @@
     "sounds": [
       "kelui-sounds:oneshot/ui/oneshot_menu_cancel"
     ]
+  },
+
+
+  "oneshot_nikomeow": {
+    "sounds": [
+      "kelui-sounds:oneshot/ui/april_fool/oneshot_nikomeow"
+    ]
+  },
+  "oneshot_cat_1": {
+    "sounds": [
+      "kelui-sounds:oneshot/ui/april_fool/oneshot_cat_1"
+    ]
+  },
+  "oneshot_cat_3": {
+    "sounds": [
+      "kelui-sounds:oneshot/ui/april_fool/oneshot_cat_3"
+    ]
+  },
+  "oneshot_cat_purr": {
+    "sounds": [
+      "kelui-sounds:oneshot/ui/april_fool/oneshot_cat_purr"
+    ]
   }
 }
